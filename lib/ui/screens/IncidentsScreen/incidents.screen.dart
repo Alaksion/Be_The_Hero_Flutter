@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../models/incicident.dart';
+import '../../../models/incident.dart';
 
 class IncidentsPage extends StatefulWidget {
   @override
@@ -64,6 +64,10 @@ class _IncidentsPageState extends State<IncidentsPage> {
 
   Widget _incidentCard(Incident incident) {
 
+    void onClickDetails(){
+      print("hello world");
+    }
+
     Widget field(String fieldName, String fieldValue) {
       const TextStyle fieldNameStyle = TextStyle(
           fontSize: 14,
@@ -77,7 +81,7 @@ class _IncidentsPageState extends State<IncidentsPage> {
       );
 
       return Container(
-        padding: EdgeInsets.symmetric(vertical: 20),
+        margin: EdgeInsets.only(bottom: 20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
@@ -91,6 +95,12 @@ class _IncidentsPageState extends State<IncidentsPage> {
       );
     }
 
+    final TextStyle detailsText = TextStyle(
+        fontWeight: FontWeight.bold,
+        color: Color(0xffdf2041),
+        fontSize: 15.0
+    );
+
     return Container(
       padding: EdgeInsets.all(24.0),
       decoration: BoxDecoration(
@@ -102,13 +112,25 @@ class _IncidentsPageState extends State<IncidentsPage> {
         children: [
           field("ONG", incident.ong),
           field("Caso", incident.description),
-          field("Valor", "${incident.value} RS\ ")
+          field("Valor", "${incident.value} RS\ "),
+          InkWell(
+            onTap: onClickDetails,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text("Ver mais detalhes", style: detailsText),
+                Icon(Icons.arrow_forward, color: Color(0xffdf2041)),
+              ],
+            ),
+          )
+
         ],
       ),
     );
   }
 
   Widget _incidentsCardList() {
+
     return Container(
       height: 500,
       margin: EdgeInsets.only(top: 10.0),
