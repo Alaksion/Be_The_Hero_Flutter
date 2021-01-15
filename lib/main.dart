@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:splashscreen/splashscreen.dart';
-import './ui/screens/IncidentsScreen/incidents.screen.dart';
+import './routes/app.router.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(
@@ -22,9 +21,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: IncidentsPage(),
-      ),
+      initialRoute: "/",
+      onGenerateRoute: RouteGenerator.generateRoute,
     );
   }
 }

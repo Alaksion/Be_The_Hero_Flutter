@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../models/incident.dart';
+import '../../components/IncidentCard/incidentCard.component.dart';
 
 class IncidentsPage extends StatefulWidget {
   @override
@@ -15,9 +16,6 @@ class _IncidentsPageState extends State<IncidentsPage> {
   }
 
   Widget _header() {
-    const AssetImage logoAsset = AssetImage('assets/logo/logo.png');
-    const Image logoImage = Image(image: logoAsset);
-
     const Color headerTextColor = Color(0xff737380);
     TextStyle headerText = TextStyle(
         fontSize: 16.00, color: headerTextColor, fontWeight: FontWeight.bold);
@@ -26,7 +24,9 @@ class _IncidentsPageState extends State<IncidentsPage> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          logoImage,
+          Image(
+            image: AssetImage('assets/logo/logo.png'),
+          ),
           Text(
             "Total de ${incidents.length} ${incidents.length > 1 ? "casos" : "caso"}",
             style: headerText,
@@ -62,73 +62,6 @@ class _IncidentsPageState extends State<IncidentsPage> {
     );
   }
 
-  Widget _incidentCard(Incident incident) {
-
-    void onClickDetails(){
-      print("hello world");
-    }
-
-    Widget field(String fieldName, String fieldValue) {
-      const TextStyle fieldNameStyle = TextStyle(
-          fontSize: 14,
-          fontWeight: FontWeight.bold,
-          color: Color(0xff41414d)
-      );
-
-      const TextStyle fieldValueStyle = TextStyle(
-          fontSize: 14,
-          color: Color(0xff41414d)
-      );
-
-      return Container(
-        margin: EdgeInsets.only(bottom: 20),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            Container(
-                child: Text(fieldName, style: fieldNameStyle),
-                margin: EdgeInsets.only(bottom: 10)
-            ),
-            Text(fieldValue, style: fieldValueStyle,)
-          ],
-        ),
-      );
-    }
-
-    final TextStyle detailsText = TextStyle(
-        fontWeight: FontWeight.bold,
-        color: Color(0xffdf2041),
-        fontSize: 15.0
-    );
-
-    return Container(
-      padding: EdgeInsets.all(24.0),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(8.0),
-        color: Colors.white,
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          field("ONG", incident.ong),
-          field("Caso", incident.description),
-          field("Valor", "${incident.value} RS\ "),
-          InkWell(
-            onTap: onClickDetails,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text("Ver mais detalhes", style: detailsText),
-                Icon(Icons.arrow_forward, color: Color(0xffdf2041)),
-              ],
-            ),
-          )
-
-        ],
-      ),
-    );
-  }
-
   Widget _incidentsCardList() {
 
     return Container(
@@ -139,7 +72,7 @@ class _IncidentsPageState extends State<IncidentsPage> {
         itemBuilder: (context, i) {
           return Column(
             children: [
-              _incidentCard(incidents[i]),
+              IncidentCard(incident: incidents[i], isDetail: false),
               Divider(height: 25, color: Colors.transparent,)
             ],
           );
@@ -151,10 +84,12 @@ class _IncidentsPageState extends State<IncidentsPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.fromLTRB(24.0, 60, 24, 0),
-      child: Column(
-        children: [_header(), _title(), _incidentsCardList()],
+    return Scaffold(
+      body: Container(
+        padding: EdgeInsets.fromLTRB(24.0, 60, 24, 0),
+        child: Column(
+          children: [_header(), _title(), _incidentsCardList()],
+        ),
       ),
     );
   }
