@@ -24,6 +24,7 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_statusbarcolor: ^0.2.3
+  splashscreen: ^1.2.0
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -33,7 +34,12 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_native_splash: ^0.2.6
 
+
+flutter_native_splash:
+  image: assets/images/splash.png
+  color: "#df2041"
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
