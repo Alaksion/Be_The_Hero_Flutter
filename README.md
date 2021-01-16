@@ -29,9 +29,6 @@
 ## Sobre o Projeto
 A aplicação Be The Hero se trata de uma plataforma onde pessoas podem cadastrar ocorrências que necessitam de arrecadações para que sejam tratadas, como por exemplo comprar remédios e tratamentos para pets, restaurar alguma localidade pública ou privada, arrecadar alimentos e muitas outras possibilidades.
 
-[![Product Name Screen Shot][product-screenshot]](https://repository-images.githubusercontent.com/249491356/780a3180-7385-11ea-8994-775b8a6fdfd3)
-
-
 
 ### Construído com
 
@@ -53,7 +50,20 @@ Para rodar a aplicação é necessário ter os seguintes componentes instalados 
 * [Flutter](https://flutter.dev/)
 * [Android Studio](https://developer.android.com/studio)
 
-## Utilização
+### Utilização
+A aplicação possui duas pricipais funcionalidades em sua versão mobile:
+* Listar as ocorrências mais recentes
+* Acessar detalhes de cada ocorrência com links diretos para comunicação com o criador da ocorrência via Whatsapp e E-mail
+
+Exemplo da tela de listagem:
+
+![Listagem](https://i.imgur.com/tz9AcmL.png)
+
+
+Exemplo da tela de detalhes:
+
+![Detalbe](https://i.imgur.com/jbdGG1A.png)
+
 
 <!-- LICENSE -->
 ## License
