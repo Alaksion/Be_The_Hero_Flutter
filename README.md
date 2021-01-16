@@ -1,8 +1,10 @@
+
+![LogoTIpo](https://repository-images.githubusercontent.com/249491356/780a3180-7385-11ea-8994-775b8a6fdfd3)
 <details open="open">
   <summary>Tabela de Conteúdos</summary>
   <ol>
     <li>
-      <a href="#about-the-project">Sobre o projeto</a>
+      <a href="#Sobre o Projeto">Sobre o projeto</a>
       <ul>
         <li><a href="#built-with">Construído com</a></li>
       </ul>
@@ -12,6 +14,7 @@
       <ul>
         <li><a href="#prerequisites">Pré Requisitos</a></li>
         <li><a href="#installation">Installation</a></li>
+        <li><a href="#Utilização">Utilização</a></li>
       </ul>
     </li>
     <li><a href="#license">License</a></li>
@@ -50,6 +53,7 @@ Para rodar a aplicação é necessário ter os seguintes componentes instalados 
 * [Flutter](https://flutter.dev/)
 * [Android Studio](https://developer.android.com/studio)
 
+## Utilização
 
 <!-- LICENSE -->
 ## License
