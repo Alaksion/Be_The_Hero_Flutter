@@ -1,23 +1,16 @@
-
-
-<!-- PROJECT LOGO -->
-<br />
-
-
-<!-- TABLE OF CONTENTS -->
 <details open="open">
-  <summary>Table of Contents</summary>
+  <summary>Tabela de Conteúdos</summary>
   <ol>
     <li>
-      <a href="#about-the-project">About The Project</a>
+      <a href="#about-the-project">Sobre o projeto</a>
       <ul>
-        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#built-with">Construído com</a></li>
       </ul>
     </li>
     <li>
-      <a href="#getting-started">Getting Started</a>
+      <a href="#getting-started">Como rodar a aplicação</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#prerequisites">Pré Requisitos</a></li>
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
@@ -33,43 +26,34 @@
 
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
+## Sobre o Projeto
+A aplicação Be The Hero se trata de uma plataforma onde pessoas podem cadastrar ocorrências que necessitam de arrecadações para que sejam tratadas, como por exemplo comprar remédios e tratamentos para pets, restaurar alguma localidade pública ou privada, arrecadar alimentos e muitas outras possibilidades.
 
 [![Product Name Screen Shot][product-screenshot]](https://repository-images.githubusercontent.com/249491356/780a3180-7385-11ea-8994-775b8a6fdfd3)
 
-There are many great README templates available on GitHub, however, I didn't find one that really suit my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should element DRY principles to the rest of your life :smile:
 
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have have contributed to expanding this template!
-
-A list of commonly used resources that I find helpful are listed in the acknowledgements.
-
-### Built With
+### Construído com
 
 This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
-* [Laravel](https://laravel.com)
-
+* [Flutter](https://flutter.dev/)
+* [MaterialDesign](https://material.io/)
 
 
 <!-- GETTING STARTED -->
-## Getting Started
+## Como rodar a aplicação
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+Esta versão do App se trata de uma demonstração, ou seja, não possui conexões com banco de dados ou serviços online e portanto pode ser facilmente rodado em qualquer máquina que esteja devidamente configurada. Para configurar sua máquina para rodar o projeto veja o seção "Pré requisitos".
 
-### Prerequisites
+Para rodar a aplicação basta clonar o repositório e abrir o projeto com a ferramenta Android Studio, e então a partir da IDE executar um emulador ou dispositivo físico para inicializar a apliçação.
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+### Pré Requisitos
+
+Para rodar a aplicação é necessário ter os seguintes componentes instalados e corretamente configurados, você pode seguir os passos de instalação de cada ferramenta de acordo com a documentação oficial.
+* [Flutter](https://flutter.dev/)
+* [Android Studio](https://developer.android.com/studio)
+
+
 
 ### Installation
 
@@ -167,3 +151,4 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/othneildrew
 [product-screenshot]: images/screenshot.png
+
