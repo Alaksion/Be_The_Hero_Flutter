@@ -13,7 +13,6 @@
       <a href="#getting-started">Como rodar a aplicação</a>
       <ul>
         <li><a href="#prerequisites">Pré Requisitos</a></li>
-        <li><a href="#installation">Installation</a></li>
         <li><a href="#Utilização">Utilização</a></li>
       </ul>
     </li>
